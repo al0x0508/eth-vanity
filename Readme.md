@@ -8,6 +8,20 @@ A tool to generate Ethereum vanity addresses.
 $ cargo build --release
 ```
 
+## CLI
+
+```
+A tool to generate Ethereum vanity addresses
+
+Usage: eth-vanity [OPTIONS] -s <STARTS_WITH>
+
+Options:
+  -s <STARTS_WITH>      Name of the person to greet
+  -c <COUNT>            Number of addresses to generate [default: 1]
+  -h, --help            Print help
+  -V, --version         Print version
+```
+
 ## Usage
 
 ```
