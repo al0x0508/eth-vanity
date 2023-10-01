@@ -11,7 +11,7 @@ fn criterion_benchmark(c: &mut Criterion) {
 
     c.bench_function("generate wallets until one matches 'aaaa'", |b| {
         b.iter(|| {
-            let generator = Generator::new(black_box("aaaa".into()));
+            let generator = Generator::new(black_box("aaaa".into()), black_box(1));
             generator.run();
         })
     });
