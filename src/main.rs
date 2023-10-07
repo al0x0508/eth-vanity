@@ -1,20 +1,8 @@
 use clap::Parser;
-use eth_vanity::{generator::Generator, utils::print_iterations};
-
-#[derive(Parser, Debug)]
-#[command(author, version, about, long_about = None)]
-struct Args {
-    /// Name of the person to greet
-    #[arg(short)]
-    starts_with: String,
-
-    /// Number of addresses to generate
-    #[arg(short, default_value = "1")]
-    count: u64,
-}
+use eth_vanity::{cli::Cli, generator::Generator, utils::print_iterations};
 
 fn main() {
-    let args = Args::parse();
+    let args = Cli::parse();
     let starts_with = args.starts_with;
     let count = args.count;
 
